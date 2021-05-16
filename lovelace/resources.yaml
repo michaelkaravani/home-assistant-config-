@@ -1,2 +1,4 @@
 - url: /hacsfiles/ha-floorplan/floorplan.js
   type: module
+- url: /local/community/todoist-task-list/todoist-task-list.js?v=1.0.1
+  type: js
