@@ -1,0 +1,4 @@
+utility_meter:
+  energy:
+    source: sensor.power_michael_total_consumption
+    cycle: bimonthly

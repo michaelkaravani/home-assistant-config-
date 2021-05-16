@@ -1,0 +1,9 @@
+climate:
+  - platform: smartir
+    name: מזגן סלון
+    unique_id: office_ac
+    device_code: 1000
+    controller_data: remote.rm_pro_remote
+    temperature_sensor: sensor.rm_pro_temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.door_window_sensor_158d0002b3399d

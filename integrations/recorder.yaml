@@ -1,0 +1,4 @@
+recorder:
+  db_url: !secret MariaDB_db
+  purge_keep_days: 3
+  auto_purge: true

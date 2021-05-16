@@ -1,0 +1,10 @@
+asuswrt:
+  host: !secret asuswrt_host
+  username: !secret asuswrt_username
+  ssh_key: /config/ssh/asus_key
+  sensors:
+    - devices
+    - upload
+    - download
+    - upload_speed
+    - download_speed

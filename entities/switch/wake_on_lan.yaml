@@ -1,0 +1,4 @@
+platform: wake_on_lan
+mac: !secret tv_mac
+name: samsing tv
+host: !secret tv_ip

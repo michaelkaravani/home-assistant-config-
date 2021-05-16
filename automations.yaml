@@ -1,0 +1,13 @@
+- id: '1611092810946'
+  alias: אוטומציה חדשה
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.uptimev2
+    above: '2'
+    below: '3'
+  condition: []
+  action:
+  - event: ''
+    event_data: {}
+  mode: single

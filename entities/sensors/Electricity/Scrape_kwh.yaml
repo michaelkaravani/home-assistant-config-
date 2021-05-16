@@ -1,0 +1,6 @@
+platform: scrape
+resource: https://www.iec.co.il/homeclients/pages/tariffs.aspx
+name: מחיר קוט"ש
+select: "#ctl00_PlaceHolderMain_ctl00_RichHtmlField1__ControlWrapper_RichHtmlField > div:nth-child(12) > span > table > tbody > tr.ms-rteTableOddRow-6 > td.ms-rteTableEvenCol-6 > p"
+value_template: '{{ ((value.split(" ")[0]) | replace (",", ".")) }}'
+unit_of_measurement: "אגורות"

@@ -1,0 +1,5 @@
+sonoff:
+  username: !secret ewelink_username
+  password: !secret ewelink_password
+  #  mode: local
+  reload: always

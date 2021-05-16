@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  kwh_price:
+    friendly_name: "תעריף חשמל"
+    unit_of_measurement: "₪"
+    icon_template: mdi:currency-ils
+    value_template: "{{ (( states('sensor.mkhyr_qvt_sh') | float / 100 ) * states('sensor.power_michael_total_consumption') | float ) | round(2) }}"
+    unique_id: price_kwh

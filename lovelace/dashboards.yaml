@@ -1,0 +1,12 @@
+lovelace-floorplan:
+  mode: yaml
+  filename: floorplan.yaml
+  title: floorplan
+  icon: mdi:home
+  show_in_sidebar: true
+lovelace-tablet:
+  mode: yaml
+  filename: tablet.yaml
+  title: tablet
+  icon: mdi:tablet-android
+  show_in_sidebar: true

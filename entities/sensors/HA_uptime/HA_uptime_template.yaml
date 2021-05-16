@@ -1,0 +1,34 @@
+platform: template
+sensors:
+  ha_uptime:
+    friendly_name: "Home Assistant uptime"
+    value_template: >-
+      {% set up_time =  as_timestamp(now()) - as_timestamp(states('sensor.uptime')) %}
+
+      {% if up_time == 0 %}
+        Just restarted...
+      {% else %}
+        {% set minutes = (up_time // 60) | int %}
+        {% set hours = (minutes // 60) %}
+        {% set days = (hours // 24) %}
+        {% set weeks = (days // 7) %}
+
+        {% set minutes = (minutes % 60) %}
+        {% set hours =  (hours % 24) %}
+        {% set days = (days % 7) %}
+
+        {% macro phrase(value, name) %}
+                  {%- set value = value %}
+                  {%- set end = ' ' if value > 1 else '' %}
+                  {{- '{} {}{}'.format(value, name, end) if value | int > 0 else '' }}
+        {%- endmacro %}
+
+        {% set text = [ phrase(weeks, 'שבועות'), phrase(days, 'ימים'), phrase(hours, 'שעות'), phrase(minutes, 'דקות') ] | select('!=','') | list | join(', ') %}
+        {% set last_comma = text.rfind(',') %}
+        {% if last_comma != -1 %}
+          {% set text = text[:last_comma] + ' ו' + text[last_comma + 1:] %}
+        {% endif %}
+
+      {{ text }}
+
+      {% endif %}

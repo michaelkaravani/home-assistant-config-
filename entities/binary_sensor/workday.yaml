@@ -1,0 +1,4 @@
+platform: workday
+country: IL
+workdays: [sun, mon, tue, wed, thu]
+excludes: [fri, sat, holiday]

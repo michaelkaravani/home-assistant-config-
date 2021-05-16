@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  uptimev2:
+    friendly_name: Uptimev2
+    value_template: >
+      {{ (as_timestamp(now()) - as_timestamp(states('sensor.uptime'))) // 60|int }}
