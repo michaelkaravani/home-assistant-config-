@@ -8,3 +8,6 @@ views:
         title: Lovelace
         content: >
           Welcome to your **Lovelace UI**.
+      - type: custom:todoist-task-list
+        entity: calendar.inbox
+        title: TodoIst inbox
