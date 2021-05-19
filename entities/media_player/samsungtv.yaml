@@ -4,6 +4,6 @@ port: 8002
 mac: !secret tv_mac
 api_key: !secret tv_api_key
 device_id: !secret tv_id
-update_method: smartthings
+update_method: ping
 #source_list: '{"TV": "KEY_TV", "HDMI": "KEY_HDMI"}'
 app_list: '{"Netflix": "11101200001", "YouTube": "111299001912", "Internet": "org.tizen.browser"}'
